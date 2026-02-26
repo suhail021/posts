@@ -1,30 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:postsapp/core/app_theme.dart';
 
-void main() {
-  runApp(const MyApp());
+import 'package:postsapp/core/app_theme.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:postsapp/features/posts/presentation/bloc/add_delete_update_posts_bloc/add_delete_update_posts_bloc.dart';
+import 'package:postsapp/features/posts/presentation/bloc/posts/posts_bloc.dart';
+import 'package:postsapp/features/posts/presentation/pages/posts_page.dart';
+import 'package:postsapp/injection_container.dart' as di;
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await di.init();
+  runApp(PostsApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class PostsApp extends StatelessWidget {
+  const PostsApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Posts App',
-     theme: appTheme,
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blue,
-          title: const Text('Posts '),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => di.sl<PostsBloc>()..add(GetAllPostsEvent()),
         ),
-        body: const Center(
-          child: Text('Posts App Home Page'),
-         ),
+        BlocProvider(create: (context) => di.sl<AddDeleteUpdatePostsBloc>()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Posts App',
+        theme: appTheme,
+        home: PostsPage(),
       ),
     );
   }
 }
-
- 

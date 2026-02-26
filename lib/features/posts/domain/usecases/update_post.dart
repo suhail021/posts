@@ -7,9 +7,8 @@ class UpdatePostUsecase {
   final PostsRepo repo;
 
   UpdatePostUsecase(this.repo);
-
+  
   Future<Either<Failure, Unit>> call(Post post) async {
     return await repo.updatePost(post);
   }
 }
-

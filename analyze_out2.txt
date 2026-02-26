@@ -1,0 +1,49 @@
+Analyzing postsapp...                                           
+
+   info - 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\core\app_theme.dart:16:5 - deprecated_member_use
+   info - 'onBackground' is deprecated and shouldn't be used. Use onSurface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\core\app_theme.dart:17:5 - deprecated_member_use
+   info - The type name 'serverException' isn't an UpperCamelCase identifier - lib\core\errors\exceptions.dart:1:7 - camel_case_types
+   info - The type name 'cacheException' isn't an UpperCamelCase identifier - lib\core\errors\exceptions.dart:10:7 - camel_case_types
+   info - The type name 'networkException' isn't an UpperCamelCase identifier - lib\core\errors\exceptions.dart:18:7 - camel_case_types
+   info - The type name 'unknownException' isn't an UpperCamelCase identifier - lib\core\errors\exceptions.dart:27:7 - camel_case_types
+   info - The type name 'validationException' isn't an UpperCamelCase identifier - lib\core\errors\exceptions.dart:36:7 - camel_case_types
+   info - Parameter 'message' could be a super parameter - lib\core\errors\failurs.dart:10:9 - use_super_parameters
+   info - Parameter 'message' could be a super parameter - lib\core\errors\failurs.dart:17:9 - use_super_parameters
+   info - Parameter 'message' could be a super parameter - lib\core\errors\failurs.dart:24:9 - use_super_parameters
+   info - Parameter 'message' could be a super parameter - lib\core\errors\failurs.dart:31:9 - use_super_parameters
+   info - Parameter 'message' could be a super parameter - lib\core\errors\failurs.dart:38:9 - use_super_parameters
+   info - Parameter 'message' could be a super parameter - lib\core\errors\failurs.dart:45:9 - use_super_parameters
+   info - The constant name 'SERVER_FAILURE_MESSAGE' isn't a lowerCamelCase identifier - lib\core\strings\failures.dart:1:14 - constant_identifier_names
+   info - The constant name 'CACHE_FAILURE_MESSAGE' isn't a lowerCamelCase identifier - lib\core\strings\failures.dart:2:14 - constant_identifier_names
+   info - The constant name 'NETWORK_FAILURE_MESSAGE' isn't a lowerCamelCase identifier - lib\core\strings\failures.dart:3:14 - constant_identifier_names
+   info - The constant name 'UNKNOWN_FAILURE_MESSAGE' isn't a lowerCamelCase identifier - lib\core\strings\failures.dart:4:14 - constant_identifier_names
+   info - The constant name 'VALIDATION_FAILURE_MESSAGE' isn't a lowerCamelCase identifier - lib\core\strings\failures.dart:5:14 - constant_identifier_names
+   info - The constant name 'UNAUTHORIZED_FAILURE_MESSAGE' isn't a lowerCamelCase identifier - lib\core\strings\failures.dart:6:14 - constant_identifier_names
+   info - The constant name 'ADD_SUCCESS_MESSAGE' isn't a lowerCamelCase identifier - lib\core\strings\message.dart:1:7 - constant_identifier_names
+   info - The constant name 'DELETE_SUCCESS_MESSAGE' isn't a lowerCamelCase identifier - lib\core\strings\message.dart:2:7 - constant_identifier_names
+   info - The constant name 'UPDATE_SUCCESS_MESSAGE' isn't a lowerCamelCase identifier - lib\core\strings\message.dart:3:7 - constant_identifier_names
+   info - The constant name 'CashedPosts' isn't a lowerCamelCase identifier - lib\features\posts\data\datasourses\post_local_data_source.dart:13:7 - constant_identifier_names
+   info - The constant name 'BaseUrl' isn't a lowerCamelCase identifier - lib\features\posts\data\datasourses\post_remote_data_source.dart:15:7 - constant_identifier_names
+   info - Use interpolation to compose strings and values - lib\features\posts\data\datasourses\post_remote_data_source.dart:24:17 - prefer_interpolation_to_compose_strings
+   info - Use interpolation to compose strings and values - lib\features\posts\data\datasourses\post_remote_data_source.dart:46:17 - prefer_interpolation_to_compose_strings
+   info - Use interpolation to compose strings and values - lib\features\posts\data\datasourses\post_remote_data_source.dart:60:17 - prefer_interpolation_to_compose_strings
+   info - Use interpolation to compose strings and values - lib\features\posts\data\datasourses\post_remote_data_source.dart:75:17 - prefer_interpolation_to_compose_strings
+   info - Use the generic function type syntax in 'typedef's - lib\features\posts\data\repositories\posts_repo_impl.dart:11:22 - prefer_generic_function_type_aliases
+   info - The imported package 'bloc' isn't a dependency of the importing package - lib\features\posts\presentation\bloc\add_delete_update_posts_bloc\add_delete_update_posts_bloc.dart:1:8 - depend_on_referenced_packages
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\add_delete_update_posts_bloc\add_delete_update_posts_bloc.dart:74:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\add_delete_update_posts_bloc\add_delete_update_posts_bloc.dart:76:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\add_delete_update_posts_bloc\add_delete_update_posts_bloc.dart:78:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\add_delete_update_posts_bloc\add_delete_update_posts_bloc.dart:80:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\add_delete_update_posts_bloc\add_delete_update_posts_bloc.dart:82:12 - type_literal_in_constant_pattern
+   info - Constructors in '@immutable' classes should be declared as 'const' - lib\features\posts\presentation\bloc\add_delete_update_posts_bloc\add_delete_update_posts_event.dart:13:3 - prefer_const_constructors_in_immutables
+   info - Constructors in '@immutable' classes should be declared as 'const' - lib\features\posts\presentation\bloc\add_delete_update_posts_bloc\add_delete_update_posts_event.dart:21:3 - prefer_const_constructors_in_immutables
+   info - Constructors in '@immutable' classes should be declared as 'const' - lib\features\posts\presentation\bloc\add_delete_update_posts_bloc\add_delete_update_posts_event.dart:29:3 - prefer_const_constructors_in_immutables
+   info - The imported package 'bloc' isn't a dependency of the importing package - lib\features\posts\presentation\bloc\posts\posts_bloc.dart:1:8 - depend_on_referenced_packages
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\posts\posts_bloc.dart:38:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\posts\posts_bloc.dart:40:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\posts\posts_bloc.dart:42:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\posts\posts_bloc.dart:44:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\posts\posts_bloc.dart:46:12 - type_literal_in_constant_pattern
+   info - Use 'TypeName _' instead of a type literal - lib\features\posts\presentation\bloc\posts\posts_bloc.dart:48:12 - type_literal_in_constant_pattern
+  error - The name 'MyApp' isn't a class - test\widget_test.dart:16:35 - creation_with_non_type
+

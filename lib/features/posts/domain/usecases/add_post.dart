@@ -11,4 +11,4 @@ class AddPostUsecase {
   Future<Either<Failure, Unit>> call(Post post) async {
     return await repo.addPost(post);
   }
-}
+} 
