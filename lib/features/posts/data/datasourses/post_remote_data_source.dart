@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:dartz/dartz.dart';
 import 'package:http/http.dart' as http;
+import 'package:postsapp/core/errors/exceptions.dart';
 import 'package:postsapp/core/errors/failurs.dart';
 import 'package:postsapp/features/posts/data/models/post_model.dart';
 
@@ -17,7 +18,7 @@ const BaseUrl = 'https://jsonplaceholder.typicode.com';
 class PostRemoteDataSourceImpl implements PostRemoteDataSource {
   final http.Client client;
 
-  PostRemoteDataSourceImpl( {required this.client});
+  PostRemoteDataSourceImpl({required this.client});
   @override
   Future<List<PostModel>> getAllPosts() async {
     final response = await client.get(
@@ -34,7 +35,7 @@ class PostRemoteDataSourceImpl implements PostRemoteDataSource {
           .toList();
       return postModels;
     } else {
-      throw ServerFailure('message');
+      throw serverException('message');
     }
   }
 
@@ -50,7 +51,7 @@ class PostRemoteDataSourceImpl implements PostRemoteDataSource {
     if (response.statusCode == 201) {
       return unit;
     } else {
-      throw ServerFailure('message');
+      throw serverException('message');
     }
   }
 
@@ -63,7 +64,7 @@ class PostRemoteDataSourceImpl implements PostRemoteDataSource {
     if (response.statusCode == 200) {
       return unit;
     } else {
-      throw ServerFailure('message');
+      throw serverException('message');
     }
   }
 
@@ -79,7 +80,7 @@ class PostRemoteDataSourceImpl implements PostRemoteDataSource {
     if (response.statusCode == 200) {
       return unit;
     } else {
-      throw ServerFailure('message');
+      throw serverException('message');
     }
   }
 }

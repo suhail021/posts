@@ -27,8 +27,10 @@ class PostsRepoImpl implements PostsRepo {
         final remotePosts = await remoteDataSource.getAllPosts();
         localDataSource.cachePosts(remotePosts);
         return Right(remotePosts);
-      } on ServerFailure {
+      } on serverException {
         return Left(ServerFailure('message'));
+      } catch (e) {
+        return Left(ServerFailure(e.toString()));
       }
     } else {
       try {
@@ -42,11 +44,7 @@ class PostsRepoImpl implements PostsRepo {
 
   @override
   Future<Either<Failure, Unit>> addPost(Post post) async {
-    final PostModel postModel = PostModel(
-      id: post.id,
-      title: post.title,
-      body: post.body,
-    );
+    final PostModel postModel = PostModel(title: post.title, body: post.body);
     return await _deletOrUpdateOrAdd(() {
       return remoteDataSource.addPost(postModel);
     });
@@ -76,10 +74,12 @@ class PostsRepoImpl implements PostsRepo {
   ) async {
     if (await networkInfo.isConnected) {
       try {
-        deletOrUpdateOrAddPost;
+        await deletOrUpdateOrAddPost();
         return Right(unit);
       } on serverException {
         return Left(ServerFailure('e'));
+      } catch (e) {
+        return Left(ServerFailure(e.toString()));
       }
     } else {
       return Left(NetworkFailure('s'));

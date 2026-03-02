@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MessageDisplay extends StatelessWidget {
-  const MessageDisplay({
-    super.key,
-    required this.message,
-  });
+  const MessageDisplay({super.key, required this.message});
 
   final String message;
 
@@ -16,18 +13,15 @@ class MessageDisplay extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
         decoration: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [
-              Color(0xff667eea),
-              Color(0xff764ba2),
-            ],
+            colors: [Color(0xff667eea), Color(0xff764ba2)],
           ),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.2),
+              color: Colors.black.withValues(alpha: 0.2),
               blurRadius: 15,
               offset: const Offset(0, 8),
-            )
+            ),
           ],
         ),
         child: Row(
